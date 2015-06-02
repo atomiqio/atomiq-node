@@ -1,1 +1,1 @@
-docker build -t atomiq .
+docker build -t atomiq:onbuild .
