@@ -1,8 +1,8 @@
-FROM node:5.7.0
+FROM node:5.7.1
 
-# Base image sets to info (default is warn), we only want error
-# because info is too verbose and there are too many irrelevant warnings
-ENV NPM_CONFIG_LOGLEVEL error
+# Being explicit, but this is the default for the base node image anyway.
+# Override with warn or error, if too verbose.
+ENV NPM_CONFIG_LOGLEVEL info
 
 # For debugging with node-inspector
 # ---------------------------------
@@ -27,7 +27,7 @@ ENV NPM_CONFIG_LOGLEVEL error
 # with a container running linux. By not making node-inspector a dependency
 # in package.json and installing it as a global tool, we ensure that the
 # container uses the correct binary.
-# 
+#
 # This will be fixed with a different convent for only mapping sources
 # and not node_modules
 #
@@ -45,4 +45,3 @@ ONBUILD COPY . /usr/src/app
 # Do not use npm start because we want the node process to have PID 1
 # Override this in your image if you have a different main module
 CMD [ "node", "app.js" ]
-
