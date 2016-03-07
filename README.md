@@ -1,23 +1,18 @@
-# atomiq-microservice-images
+The atomiq image is based on the official [Node.js image](https://hub.docker.com/_/node/) ([GitHub](https://github.com/nodejs/docker-node)). Use the official Node image if you just need a Node runtime environment; use this image as a base image for `onbuild` support for new images.
 
-The atomiq base image is based on [iojs](https://registry.hub.docker.com/_/iojs/) ([GitHub](https://github.com/nodejs/docker-iojs)).
+### Features
 
-To use, cd to the `onbuild` directory and run `./build.sh` to build the image on your Docker host.
+ * Installs node-inspector and exposes it on port 8080
+ * Executes onbuild triggers to copy your sources to `/usr/src/app`
 
-In your app directory root, create a `Dockerfile`:
+### Use in your own Dockerfile
 
-```
-FROM atomiq:onbuild
+    FROM atomiq/node[:tag-onbuild]
 
-# Expose service port
-EXPOSE 3000
-```
+    # Expose ports as needed
+    EXPOSE 3000
 
-Then run:
+### Tags
 
-```
-$ docker build -t app
-$ docker run --rm -it app
-```
-
-
+* 5.7.1-onbuild, 5.7-onbuild, 5-onbuild, onbuild ([5.7/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/5.7/onbuild/Dockerfile))
+* 4.3.2-onbuild, 4.3-onbuild, 4-onbuild ([4.3/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/4.3/onbuild/Dockerfile))
