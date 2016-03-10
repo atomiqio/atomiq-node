@@ -14,5 +14,5 @@ The atomiq image is based on the official [Node.js image](https://hub.docker.com
 
 ### Tags
 
-* 5.7.1-onbuild, 5.7-onbuild, 5-onbuild, onbuild ([5.7/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/5.7/onbuild/Dockerfile))
 * 4.3.2-onbuild, 4.3-onbuild, 4-onbuild ([4.3/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/4.3/onbuild/Dockerfile))
+* 5.8.0-onbuild, 5.8-onbuild, 5-onbuild, onbuild ([5.8/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/5.8/onbuild/Dockerfile))
