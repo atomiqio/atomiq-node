@@ -1,18 +1,25 @@
-The atomiq image is based on the official [Node.js image](https://hub.docker.com/_/node/) ([GitHub](https://github.com/nodejs/docker-node)). Use the official Node image if you just need a Node runtime environment; use this image as a base image for `onbuild` support for new images.
+# atomiq-node
 
-### Features
+`atomiq-node` is based on latest version of [mhart/alpine-node] and provides an
+opinionated selection of packages optimized as a base image for building atomiq
+microservices.
+
+## Features
 
  * Installs node-inspector and exposes it on port 8080
  * Executes onbuild triggers to copy your sources to `/usr/src/app`
 
-### Use in your own Dockerfile
+## Use in your own Dockerfile
 
-    FROM atomiq/node[:tag-onbuild]
+    FROM atomiq/node[:VERSION-onbuild]
 
     # Expose ports as needed
     EXPOSE 3000
 
-### Tags
+## Tags
 
-* 4.4.3-onbuild, 4.4-onbuild, 4-onbuild ([4.4/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/4.4/onbuild/Dockerfile))
-* 5.10.0-onbuild, 5.10-onbuild, 5-onbuild, onbuild ([5.10/onbuild/Dockerfile](https://github.com/atomiqio/docker-node/blob/master/5.10/onbuild/Dockerfile))
+* 6-onbuild, 6.2-onbuild, 6.2.1-onbuild, latest-onbuild ([6.2/onbuild/Dockerfile](https://github.com/atomiqio/atomiq-node/blob/master/6.2/onbuild/Dockerfile))
+
+
+
+[mhart/alpine-node]:       https://github.com/mhart/alpine-node       "mhart/alpine-node"

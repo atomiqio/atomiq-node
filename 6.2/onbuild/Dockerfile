@@ -4,9 +4,10 @@ FROM mhart/alpine-node:6.2.1
 RUN apk add --no-cache gcc g++ make python
 
 # global packages
-RUN npm install -g atomiq-cli eslint esformatter babel-cli babel-node-debug isparta mocha node-inspector
-# common packages (warm the cache)
-RUN npm install atomiq babel-polyfill body-parser debug express kafka-node node-fetch ramda babel-eslint babel-plugin-syntax-async-functions babel-plugin-transform-regenerator babel-preset-es2015 babel-register eslint-plugin-babel bunyan source-map-support bluebird dockerode
+RUN npm install -g atomiq-cli eslint esformatter babel-cli babel-node-debug isparta istanbul mocha node-inspector
+
+# common packages (npm cache)
+RUN npm install atomiq body-parser debug express node-fetch ramda babel-eslint babel-plugin-syntax-async-functions babel-plugin-transform-regenerator babel-register eslint-plugin-babel bunyan source-map-support bluebird dockerode
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
