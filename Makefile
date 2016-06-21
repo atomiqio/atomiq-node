@@ -12,4 +12,4 @@ node:
 	cd 6.2 && docker build -t $(IMAGE) .
 
 onbuild:
-	cd 6.2/onbuild && docker build -t "$(IMAGE)-onbuild" .
+	cd 6.2/onbuild && docker build --no-cache -t "$(IMAGE)-onbuild" .
