@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.2.1
+FROM mhart/alpine-node:6.2.2
 
 # support for modules with native dependencies
 RUN apk add --no-cache gcc g++ make python

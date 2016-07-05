@@ -20,7 +20,7 @@ microservices.
 
 ## Tags
 
-* 6-onbuild, 6.2-onbuild, 6.2.1-onbuild, latest-onbuild ([6.2/onbuild/Dockerfile](https://github.com/atomiqio/atomiq-node/blob/master/6.2/onbuild/Dockerfile))
+* 6-onbuild, 6.2-onbuild, 6.2.2-onbuild, latest-onbuild ([6.2/onbuild/Dockerfile](https://github.com/atomiqio/atomiq-node/blob/master/6.2/onbuild/Dockerfile))
 
 
 
