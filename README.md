@@ -22,6 +22,7 @@ microservices.
 
 * 6-onbuild, 6.2-onbuild, 6.2.2-onbuild, latest-onbuild ([6.2/onbuild/Dockerfile](https://github.com/atomiqio/atomiq-node/blob/master/6.2/onbuild/Dockerfile))
 
+* 6, 6.2, 6.2.2, latest ([6.2/Dockerfile](https://github.com/atomiqio/atomiq-node/blob/master/6.2/Dockerfile))
 
 
 [mhart/alpine-node]:       https://github.com/mhart/alpine-node       "mhart/alpine-node"
